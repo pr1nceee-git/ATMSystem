@@ -68,4 +68,24 @@ public class ATMSystem {
     public void insufficientFunds() { JOptionPane.showMessageDialog(null, "Insufficient funds!"); }
     public void invalidOption() { JOptionPane.showMessageDialog(null, "Invalid option. Try again!"); }
     public void exitMessage() { JOptionPane.showMessageDialog(null, "Exiting... Thank you!"); }
+
+
+    public boolean isDivisibleBy100(double amount) {
+        return amount % 100 == 0;
+    }
+
+    public void notDivisibleBy100() {
+        JOptionPane.showMessageDialog(null,
+                "Amount must be divisible by 100!");
+    }
+
+
+    public boolean isWithinLimits(double amount) {
+        return amount >= 2000 && amount <= 100000;
+    }
+
+    public void amountOutOfRange() {
+        JOptionPane.showMessageDialog(null,
+                "Amount must be AT LEAST ₱2,000 and NOT MORE than ₱100,000!");
+    }
 }
